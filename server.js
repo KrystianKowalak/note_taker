@@ -1,5 +1,6 @@
 //Requiring all need packages and locations
 const express = require("express");
+const path = require("path");
 const routes = require("./routes");
 
 //Creating a port and initializing the app

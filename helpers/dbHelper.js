@@ -9,12 +9,21 @@ const writeToFile = (destination, content) => {
 };
 
 const readAndAppend = async (destination, content) => {
-        const data = await readFromFile(destination);
-        console.info(`\nData read from ${destination}`)
-        const parsedData = JSON.parse(data);
-        parsedData.push(content);
-        await writeToFile(destination, parsedData);
-        console.info(`\nData written to ${destination}`)
+    const data = await readFromFile(destination);
+    console.info(`\nData read from ${destination}`)
+    const parsedData = JSON.parse(data);
+    parsedData.push(content);
+    await writeToFile(destination, parsedData);
+    console.info(`\nData written to ${destination}`)
 }
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+const deleteNote = (dataArray, id) => {
+    return dataArray.reduce((previousValue, currentValue) => {
+        if (id != currentValue.id) {
+            previousValue.push(currentValue);
+        }
+        return previousValue;
+    }, []);
+}
+
+module.exports = { readFromFile, writeToFile, readAndAppend, deleteNote };
