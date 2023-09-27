@@ -12,6 +12,11 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(routes);
 
+//Catch all to send user back to index.html for undesired paths
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, "./public/index.html"))
+)
+
 // Server is started on passed port
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
