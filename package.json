@@ -1,15 +1,18 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "![ancient-gorge-15369-ed41dc4e01b3 herokuapp com_](https://github.com/KrystianKowalak/note_taker/assets/63071475/0218c5d2-39d4-4469-8147-c60cd502eb4f) ![ancient-gorge-15369-ed41dc4e01b3 herokuapp com_notes](https://github.com/KrystianKowalak/note_taker/assets/63071475/4d9b51f7-67ee-4dc8-bd3a-b34780ba4d14)",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Krystian kowalak",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
     "uuid": "^3.4.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
